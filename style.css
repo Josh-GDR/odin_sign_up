@@ -1,0 +1,66 @@
+:root {
+    --color: rgb(224, 224, 224);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--color);
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+#imagebg {
+    height: 100vh;
+    width: 40vw;
+    background-image: url('./public/bg_image.jpg');
+    background-size: cover;
+    background-position-x: center;
+}
+
+#imagebg_info {
+    height: 20%;
+    background: rgb(0,0,0,75%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    margin-top: 25%;
+}
+
+#imagebg_info a img {
+    height: 140px;
+}
+
+#imagebg_info p{
+    font-size: 54px;
+    padding-left: 10px;
+    color: var(--color);
+}
+
+#login_space {
+    height: 100vh;
+    width: 60vw;
+}
+
+#login_header {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#login_form {
+
+}
+
