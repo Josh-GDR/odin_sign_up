@@ -1,11 +1,13 @@
 :root {
     --color: rgb(224, 224, 224);
+    --login_header_height: 30%;
 }
 
 body {
     margin: 0;
     padding: 0;
     background: var(--color);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 main {
@@ -49,8 +51,8 @@ main {
 }
 
 #login_header {
-    height: 40%;
-    width: 100%;
+    height: var(--login_header_height);
+    width: min(550px, 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,7 +62,74 @@ main {
     padding-right: 20px;
 }
 
-#login_form {
-
+#login_form{
+    height: calc(100% - var(--login_header_height));
+    margin-left: 5px;
+    width: 95%;
 }
 
+#login_form form {
+    height: 60%;
+    width: 100%;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 5px 5px black;
+}
+
+form h1 {
+    padding-left: 15px;
+}
+
+.login_element {
+    flex: auto;
+    display: flex;
+}
+
+.input_container {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.input_container label,
+.input_container input {
+    text-align: center;
+    font-size:large;
+}
+
+.input_container label {
+    margin-bottom: 7px;
+}
+
+.input_container label span{
+    color: red;
+}
+
+.input_container input:invalid {
+    border-color: red;
+}
+
+#login_form button {
+    font-size: 24px;
+    margin-top: 32px;
+    margin-left: 20px;
+    padding: 7px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#login_form h3 {
+    margin-left: 20px;
+}
+
+#login_form h3 a {
+    margin-left: 5px;
+    text-decoration: none;
+    color:blue;
+}
+
+#login_form h3 a:active {
+    color: purple;
+}
